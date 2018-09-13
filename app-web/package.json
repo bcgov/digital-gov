@@ -1,0 +1,112 @@
+{
+  "name": "developer.gov.bc.ca",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bcgov/devhub-app-web.git"
+  },
+  "description": "DevHub aims to become the \"Central Nervous System\" for the growing gov developer community.",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@fortawesome/react-fontawesome": "^0.1.3",
+    "acorn": "^6.0.4",
+    "babel-plugin-styled-components": "^1.9.2",
+    "chalk": "^2.4.1",
+    "dotenv": "^6.2.0",
+    "emotion": "^8.0.8",
+    "emotion-server": "^8.0.8",
+    "feather-icons": "^3.3.0",
+    "flag": "^3.0.0-1",
+    "gatsby": "^2.0.64",
+    "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-google-analytics": "^2.0.8",
+    "gatsby-plugin-postcss": "^2.0.2",
+    "gatsby-plugin-react-helmet": "^3.0.4",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-source-filesystem": "^2.0.11",
+    "gatsby-source-github-api": "0.0.3",
+    "gatsby-transformer-sharp": "^2.1.9",
+    "github-markdown-css": "^2.10.0",
+    "i": "^0.3.6",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-emotion": "^10.0.0",
+    "react-helmet": "^5.2.0",
+    "shortid": "^2.2.14",
+    "styled-components": "^4.1.2",
+    "styled-system": "^3.1.11"
+  },
+  "scripts": {
+    "dev": "node_modules/.bin/gatsby develop -H 0.0.0.0",
+    "build": "node_modules/.bin/gatsby build",
+    "test:watch": "jest --watch --env=jsdom",
+    "test": "jest --env=jsdom",
+    "test:ci": "CI=true shell-scripts/unit-tests.sh",
+    "test:lint": "eslint src/",
+    "prettify": "prettier --write '{./,__{tests,mocks}__}/**/*.+(js|jsx)'"
+  },
+  "jest": {
+    "transform": {
+      ".(js|jsx)": "<rootDir>/config/jest/jestPreprocess.js",
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/fileTransformer.js"
+    },
+    "testRegex": "(\\.(i?test|spec))\\.(jsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ],
+    "moduleFileExtensions": [
+      "jsx",
+      "js",
+      "module.css",
+      ".css",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "\\.module\\.(css|less)$": "identity-obj-proxy",
+      ".(css)$": "identity-obj-proxy"
+    },
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov",
+      "text",
+      "html"
+    ],
+    "setupFiles": [
+      "raf/polyfill",
+      "jest-localstorage-mock",
+      "<rootDir>/config/setupTests.js",
+      "<rootDir>/config/jest/loadershim.js"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-preset-gatsby": "^0.1.6",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.4.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "jest-localstorage-mock": "^2.3.0",
+    "prettier": "^1.15.3",
+    "react-test-renderer": "^16.6.3"
+  }
+}

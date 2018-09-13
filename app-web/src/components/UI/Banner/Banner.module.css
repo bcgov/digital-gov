@@ -1,0 +1,19 @@
+.Logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: inherit;
+    margin: 0 10px 0 0;
+}
+
+.Logo h1 {
+  font-size: 2.0em;
+}
+
+.Logo:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.Logo a:visited {
+    color: inherit;
+}

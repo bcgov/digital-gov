@@ -1,0 +1,31 @@
+body {
+  font-family: 'Noto Sans', Calibri, Arial, 'Sans Serif';
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  background-color: #fafafa;
+}
+
+#___gatsby, #___gatsby > div, .layout {
+  height: 100%;
+}
+
+.large-screen {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .small-screen {
+    display: none;
+  }
+
+  .large-screen {
+    display: block;
+  }
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
