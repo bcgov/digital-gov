@@ -24,14 +24,13 @@ export class Layout extends React.Component {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  useAuth: PropTypes.bool.isRequired,
-  login: PropTypes.func.isRequired,
-  logout: PropTypes.func.isRequired,
-  toggleMenu: PropTypes.func.isRequired,
+  showHamburger: PropTypes.bool,
+  toggleMenu: PropTypes.func,
 };
 
 Layout.defaultProps = {
   showHamburger: false,
+  toggleMenu: () => null,
 };
 
 export default Layout;
