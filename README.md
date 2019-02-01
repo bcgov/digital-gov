@@ -115,7 +115,7 @@ Feature lifecycle is as follows:
 * build image `docker build -t digital-gov-client .`
 * run image as container with the following volumes (until a better solution is found) 
 ```
-docker run -v `pwd`/src:/usr/src/app/src -v `pwd`/plugins:/usr/src/app/plugins -v `pwd`/__tests__:/usr/src/app/__tests__ -v `pwd`/__fixtures__:/usr/src/app/__fixtures__ -v `pwd`/__mocks__:/usr/src/app/__mocks__ -v `pwd`/source-registry:/usr/src/app/source-registry -p 8000:8000 devhub-client
+docker run -v `pwd`/src:/usr/src/app/src -v `pwd`/plugins:/usr/src/app/plugins -v `pwd`/__tests__:/usr/src/app/__tests__ -v `pwd`/__fixtures__:/usr/src/app/__fixtures__ -v `pwd`/__mocks__:/usr/src/app/__mocks__ -v `pwd`/source-registry:/usr/src/app/source-registry -p 8000:8000 digital-gov-client
 ```
 * **Note** `npm run develop` calls gatsby develop and sets the host with `-H 0.0.0.0`. This is so docker can correctly
 listen for requests on your local machines localhost.
