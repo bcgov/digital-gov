@@ -3,7 +3,7 @@ app {
     name = 'jenkins-digital-gov'
     namespaces {
         'build'{
-            namespace = 'digital-gov-tools'
+            namespace = 'zklvz6-tools'
             disposable = true
         }
         'dev' {
@@ -40,7 +40,7 @@ app {
         timeoutInSeconds = 60*20 // 20 minutes
         templates = [
             [
-                'file':'https://raw.githubusercontent.com/cvarjao-o/openshift-templates/stable/jenkins/jenkins.bc.yaml',
+                'file':'templates/jenkins.bc.yaml',
                 'params':[
                     'NAME': "${app.build.name}",
                     'SUFFIX': "${app.build.suffix}",
@@ -66,7 +66,7 @@ app {
         timeoutInSeconds = 60*20 // 20 minutes
         templates = [
                 [
-                    'file':'https://raw.githubusercontent.com/cvarjao-o/openshift-templates/stable/jenkins/jenkins.dc.yaml',
+                    'file':'templates/jenkins.dc.yaml',
                     'params':[
                         'NAME':app.deployment.name,
                         'BC_NAME':app.build.name,
