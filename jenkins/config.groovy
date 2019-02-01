@@ -1,9 +1,9 @@
 
 app {
-    name = 'jenkins-devhub'
+    name = 'jenkins-digital-gov'
     namespaces {
         'build'{
-            namespace = 'devhub-tools'
+            namespace = 'digital-gov-tools'
             disposable = true
         }
         'dev' {

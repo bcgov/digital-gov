@@ -32,7 +32,7 @@
           <id>22bc9c64-6682-417e-88d9-d9c987c6d8e6</id>
           <credentialsId>github-account</credentialsId>
           <repoOwner>bcgov</repoOwner>
-          <repository>devhub-app-web</repository>
+          <repository>digital-gov</repository>
           <traits>
             <org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
               <strategyId>2</strategyId>

@@ -1,0 +1,2 @@
+use this file to hold templates for secrets and other things that may be needed
+by build and deployment configs in the main branch
