@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Template
 metadata:
   creationTimestamp: null
-  name: debhub-app-web
+  name: digital-gov-app-web
 labels:
-  template: devhub-app-web
+  template: digital-gov-app-web
 objects:
 - apiVersion: v1
   kind: ImageStream
@@ -119,21 +119,6 @@ parameters:
 - description: A name used for routes/services and deployment configs
   displayName: Host
   name: HOST
-  required: false
-  value: ''
-- description: A base url of sso in the env
-  displayName: sso base URL
-  name: SSO_BASE_URL_VALUE
-  required: false
-  value: ''
-- description: A sso client id in the env
-  displayName: sso client id
-  name: SSO_CLIENT_ID_VALUE
-  required: false
-  value: ''
-- description: A sso realm name in the env
-  displayName: sso realm name
-  name: SSO_REALM_NAME_VALUE
   required: false
   value: ''
 - description: A volumn used for the caddy from config map
