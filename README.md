@@ -30,6 +30,8 @@ Currently, CSI Labs is a statically generated site (generated using GatsbyJS) an
 
 This project follows the [GitHub Flow workflow](https://guides.github.com/introduction/flow/) for managing code branches and releases.  Details and more specifics of how features are developed and rolled out are described below.
 
+> Do not attempt to merge a PR on your own, the jenkins process merges pull requests when promoted through the stages dev test prod. 
+
 #### Feature Lifecycle and Release Process
 
 As indicated above, the team follows the GitHub approach for managing code and releases.  Accompanying this general approach the team has implemented some specific structures, tools and practices that are described in this section.
