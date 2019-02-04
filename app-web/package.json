@@ -39,6 +39,8 @@
     "react-dom": "^16.6.3",
     "react-emotion": "^10.0.0",
     "react-helmet": "^5.2.0",
+    "react-intl": "^2.8.0",
+    "reactstrap": "^7.1.0",
     "shortid": "^2.2.14",
     "styled-components": "^4.1.2",
     "styled-system": "^3.1.11"

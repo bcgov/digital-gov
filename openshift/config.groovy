@@ -1,21 +1,21 @@
 
 app {
-    name = 'csi-lab'
+    name = 'digital-gov'
     namespaces {
         'build'{
-            namespace = 'csi-lab-tools'
+            namespace = 'zklvz6-tools'
             disposable = true
         }
         'dev' {
-            namespace = 'csi-lab-dev'
+            namespace = 'zklvz6-dev'
             disposable = true
         }
         'test' {
-            namespace = 'csi-lab-test'
+            namespace = 'zklvz6-test'
             disposable = false
         }
         'prod' {
-            namespace = 'csi-lab-prod'
+            namespace = 'zklvz6-prod'
             disposable = false
         }
     }

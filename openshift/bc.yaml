@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   name: jenkins
 labels:
-  template: csi-labs-app
+  template: digital-gov-app
 objects:
 - apiVersion: v1
   kind: ImageStream
@@ -131,7 +131,7 @@ parameters:
   displayName: Name
   name: NAME
   required: true
-  value: csi-labs-app-web
+  value: digital-gov-app-web
 - description: A name suffix used for all objects
   displayName: Suffix
   name: SUFFIX

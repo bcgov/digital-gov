@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Province of British Columbia
+Copyright 2019 Province of British Columbia
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -15,14 +15,10 @@ limitations under the License.
 
 Created by Patrick Simonian
 */
-import React from 'react';
-import styles from './AppLogo.module.css';
-import content from './content';
 
-const AppLogo = () => (
-  <h1 className={styles.AppLogo} id={content.header.id}>
-    {content.header.message}
-  </h1>
-);
-
-export default AppLogo;
+export default {
+  header: {
+    id: 'csi.lab.header.main',
+    message: 'CSI Lab',
+  },
+};
