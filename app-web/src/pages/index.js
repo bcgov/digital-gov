@@ -7,7 +7,8 @@ export class Index extends Component {
   render() {
     return (
       <Layout>
-        <Container>
+        {/* css prop is from emotion package */}
+        <Container css={{ marginTop: 55 }}>
           <Row>
             <Col md="8" sm="12">
               Image will be here
