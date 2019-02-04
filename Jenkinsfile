@@ -29,8 +29,16 @@ pipeline {
       steps {
         echo "Deploying ..."
         sh "curl -sSL '${OCP_PIPELINE_CLI_URL}' | bash -s deploy --config=openshift/config.groovy --pr=${CHANGE_ID} --env=dev"
-        echo "Creating sso client ..."
-        sh "openshift/keycloak-scripts/kc-create-client.sh ${CHANGE_ID}"
+        echo "NOT Creating SSO Client at this time, please view Jenkinsfile for more details!"
+        // digital.gov is not using sso at this time, so we will avoid creating clients for the dev name space
+        // as a note, the reason we are dynamically creating clients for sso is because the dev name space's route is
+        // based on the pr number and therefor is constantly changing. 
+        // once sso is required this code may be uncommentefd (some changes may need to be done permissions wise to allow)
+        // dev to access the tools namespaces' secrets. 
+        // in addition the caddy file may need modifying to allow for front end code to reference the dynamic uri for an sso client
+        // see the devhub-app-web repo and or the signing-web repo for details on that. 
+        // echo "Creating sso client ..."
+        // sh "openshift/keycloak-scripts/kc-create-client.sh ${CHANGE_ID}"
       }
     }
     
@@ -99,7 +107,8 @@ pipeline {
           bcgov.GitHubHelper.mergeAndClosePullRequest(this, mergeMethod)
         }
         echo "Cleaning sso client ..."
-        sh "openshift/keycloak-scripts/kc-delete-client.sh ${CHANGE_ID}"
+        // uncommented for reasons described in dev stage!
+        // sh "openshift/keycloak-scripts/kc-delete-client.sh ${CHANGE_ID}"
       }
     }
   }
