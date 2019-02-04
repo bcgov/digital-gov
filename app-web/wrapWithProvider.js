@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Province of British Columbia
+Copyright 2019 Province of British Columbia
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -15,8 +15,10 @@ limitations under the License.
 
 Created by Patrick Simonian
 */
-// for more info https://github.com/gatsbyjs/gatsby/tree/master/examples/using-redux
-import wrapWithProvider from './wrapWithProvider';
+// main wrapper component to provide 'providers' to all gatsby pages
+// this allows to wrap things like redux or other hoc's BUT NOT a router
+// since gatsby has one built internally
+import React from 'react';
+import { IntlProvider } from 'react-intl';
 
-export const wrapRootElement = wrapWithProvider;
-
+export default ({ element }) => <IntlProvider locale="en">{element}</IntlProvider>;

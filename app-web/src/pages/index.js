@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 // components
 import Layout from '../hoc/Layout';
 import { Container, Row, Col } from 'reactstrap';
-
+import { FormattedMessage } from 'react-intl';
+import { HOMEPAGE_CONTENT } from './content';
 export class Index extends Component {
   render() {
     return (
@@ -15,11 +16,11 @@ export class Index extends Component {
             </Col>
             <Col md="4" sm={{ size: 6, offset: 3 }}>
               <main>
-                <h2>CSI Lab</h2>
+                <h2>
+                  <FormattedMessage {...HOMEPAGE_CONTENT.title} />
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consectetur vulputate
-                  maximus. Sed nibh nisi, sagittis in ex non, elementum suscipit turpis. Cras et
-                  nulla eros.
+                  <FormattedMessage {...HOMEPAGE_CONTENT.introDescription} />
                 </p>
               </main>
             </Col>
