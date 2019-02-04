@@ -4,6 +4,7 @@
     align-items: center;
     color: inherit;
     margin: 0 10px 0 0;
+    text-decoration: none;
 }
 
 .Logo h1 {
@@ -11,7 +12,7 @@
 }
 
 .Logo:hover {
-  text-decoration: none;
+  text-decoration: inherit;
   color: inherit;
 }
 .Logo a:visited {
