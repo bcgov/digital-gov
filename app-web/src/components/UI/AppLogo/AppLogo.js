@@ -17,7 +17,12 @@ Created by Patrick Simonian
 */
 import React from 'react';
 import styles from './AppLogo.module.css';
+import content from './content';
 
-const AppLogo = () => <h1 className={styles.AppLogo}>CSI Labs</h1>;
+const AppLogo = () => (
+  <h1 className={styles.AppLogo} id={content.header.id}>
+    {content.header.message}
+  </h1>
+);
 
 export default AppLogo;
