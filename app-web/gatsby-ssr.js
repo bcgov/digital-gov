@@ -19,4 +19,3 @@ Created by Patrick Simonian
 import wrapWithProvider from './wrapWithProvider';
 
 export const wrapRootElement = wrapWithProvider;
-

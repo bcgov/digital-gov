@@ -4,59 +4,37 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Layout from '../hoc/Layout';
 import { Container, Row, Col } from 'reactstrap';
-import { FormattedMessage } from 'react-intl';
-import { HOMEPAGE_CONTENT } from './content';
+import SidePanel from '../components/Home/SidePanel';
+import Main from '../components/Home/Main';
+import { mainGradientBG } from '../constants/styles';
+
 export class Index extends Component {
   render() {
     const { data } = this.props;
-
     return (
       <Layout>
         {/* css prop is from emotion package */}
-        <Container css={{ margin: '55px auto' }}>
-          <Row>
-            <Col md="7" sm="12" css={{ padding: 0 }}>
-              <Img fluid={data.file.childImageSharp.fluid} />
-            </Col>
-            <Col md="5" sm={{ size: 6 }}>
-              <main
-                css={{
-                  marginTop: 25,
-                }}
-              >
-                <h2>With a digital mindset and methods we can:</h2>
-                <ol>
-                  <li>Deliver better services to citizens</li>
-                  <li>Make better decisions about polices</li>
-                  <li>Achieve better value from our investments</li>
-                </ol>
-              </main>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={{ size: 10, offset: 1 }} css={{ marginTop: 20 }}>
-              <section>
-                <h2>
-                  <strong>
-                    The Continuous Service Improvement (CSI) lab is a space where we are learning to
-                    do this better
-                  </strong>
-                </h2>
-                <p>
-                  A CSI Lab residency is for Leaders who want to offer exemplary service, optimize
-                  tax dollars, and build high performing modern organizations: <br />
-                  The CSI lab creates and accelerates high performing teams that rapidly engage
-                  people, design, make, and ship service improvements using modern methods.
-                </p>
-                <p>
-                  Unlike team retreats, courses, and consultant reports, The CSI lab invests heavily
-                  in learning by doing, with the support of Agile methods, service design, modern
-                  technology, and community.
-                </p>
-              </section>
-            </Col>
-          </Row>
-        </Container>
+        <div css={{ backgroundColor: '#f2f2f2', color: '#444' }}>
+          <Container css={{ border: '1px solid #ccc' }}>
+            <Row>
+              <Col md="7" sm="12" css={{ padding: 0 }}>
+                <Img fluid={data.file.childImageSharp.fluid} alt="image of CSI Lab" />
+              </Col>
+              <Col md="5" sm={{ size: 6 }}>
+                <SidePanel />
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <div css={[mainGradientBG, { flexGrow: 1, paddingTop: 25 }]}>
+          <Container>
+            <Row>
+              <Col md={{ size: 10, offset: 1 }} css={{ marginTop: 20 }}>
+                <Main />
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </Layout>
     );
   }
