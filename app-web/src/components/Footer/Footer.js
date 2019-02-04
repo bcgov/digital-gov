@@ -17,12 +17,25 @@ Created by Patrick Simonian
 */
 import React from 'react';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
+import { FormattedMessage } from 'react-intl';
+import Link from '../UI/Link/Link';
 import classes from './Footer.module.css';
 import { FOOTER_NAVIGATION } from '../../constants/ui';
 
 const PrimaryFooter = props => (
   <footer className={classes.PrimaryFooter}>
-    <div className={classes.Container} />
+    <div className={classes.Container}>
+      <ul>
+        {FOOTER_NAVIGATION.map(navItem => (
+          <li key={shortid.generate()}>
+            <Link to={navItem.to} aria-label={navItem.message.description}>
+              <FormattedMessage {...navItem.message} />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   </footer>
 );
 
