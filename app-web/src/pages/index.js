@@ -49,7 +49,7 @@ export const query = graphql`
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
         fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_noBase64
           presentationWidth
         }
       }
