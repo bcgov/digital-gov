@@ -9,6 +9,8 @@
   "description": "DevHub aims to become the \"Central Nervous System\" for the growing gov developer community.",
   "license": "Apache-2.0",
   "dependencies": {
+    "@emotion/core": "^10.0.7",
+    "@emotion/styled": "^10.0.7",
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
