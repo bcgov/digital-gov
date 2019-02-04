@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'CSI Labs',
@@ -5,6 +6,13 @@ module.exports = {
   pathPrefix: '/images',
   mapping: {},
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `assets/images`),
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-analytics',

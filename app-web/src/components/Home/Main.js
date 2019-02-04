@@ -1,5 +1,5 @@
 /*
-Copyright 2018 Province of British Columbia
+Copyright 2019 Province of British Columbia
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -15,7 +15,24 @@ limitations under the License.
 
 Created by Patrick Simonian
 */
-// for more info https://github.com/gatsbyjs/gatsby/tree/master/examples/using-redux
-import wrapWithProvider from './wrapWithProvider';
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { HOMEPAGE_CONTENT } from './content';
 
-export const wrapRootElement = wrapWithProvider;
+const HomeMainContent = () => (
+  <main>
+    <h2>
+      <strong>
+        <FormattedMessage {...HOMEPAGE_CONTENT.MAIN.title} />
+      </strong>
+    </h2>
+    <p>
+      <FormattedMessage {...HOMEPAGE_CONTENT.MAIN.p1} />
+    </p>
+    <p>
+      <FormattedMessage {...HOMEPAGE_CONTENT.MAIN.p2} />
+    </p>
+  </main>
+);
+
+export default HomeMainContent;

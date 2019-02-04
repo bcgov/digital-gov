@@ -11,7 +11,15 @@ export class Layout extends React.Component {
     const { children, toggleMenu } = this.props;
 
     return (
-      <div className="layout">
+      <div
+        className="layout"
+        css={{
+          margin: '0 auto',
+          padding: '55px 0 44px',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
         <Header showHamburger hamburgerClicked={toggleMenu} />
 
         {children}

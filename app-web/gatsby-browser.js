@@ -19,7 +19,10 @@ Created by Patrick Simonian
 // as well as wrap all components with the root provider, which is a redux store
 // for more info https://github.com/gatsbyjs/gatsby/tree/master/examples/using-redux
 import './src/assets/styles/fontawesome.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // this hack is to resolve issue https://stackoverflow.com/questions/49781726/react-font-awesome-renders-big-icon-until-scales-down
 import { config } from '@fortawesome/fontawesome-svg-core';
-
+import wrapWithProvider from './wrapWithProvider';
 config.autoAddCss = false;
+
+export const wrapRootElement = wrapWithProvider;
