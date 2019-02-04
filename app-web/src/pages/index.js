@@ -13,13 +13,17 @@ export class Index extends Component {
     return (
       <Layout>
         {/* css prop is from emotion package */}
-        <Container css={{ marginTop: 55 }}>
+        <Container css={{ margin: '55px auto' }}>
           <Row>
-            <Col md="8" sm="12">
+            <Col md="7" sm="12" css={{ padding: 0 }}>
               <Img fluid={data.file.childImageSharp.fluid} />
             </Col>
-            <Col md="4" sm={{ size: 6, offset: 3 }}>
-              <main>
+            <Col md="5" sm={{ size: 6 }}>
+              <main
+                css={{
+                  marginTop: 25,
+                }}
+              >
                 <h2>With a digital mindset and methods we can:</h2>
                 <ol>
                   <li>Deliver better services to citizens</li>
@@ -30,7 +34,7 @@ export class Index extends Component {
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col md={{ size: 10, offset: 1 }} css={{ marginTop: 20 }}>
               <section>
                 <h2>
                   <strong>
@@ -66,7 +70,7 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 600, quality: 100) {
+        fluid(maxWidth: 500, quality: 100) {
           ...GatsbyImageSharpFluid
           presentationWidth
         }
