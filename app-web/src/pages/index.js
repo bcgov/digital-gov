@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby';
 // components
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
 import Layout from '../hoc/Layout';
 import { Container, Row, Col } from 'reactstrap';
 import { FormattedMessage } from 'react-intl';
@@ -20,13 +20,36 @@ export class Index extends Component {
             </Col>
             <Col md="4" sm={{ size: 6, offset: 3 }}>
               <main>
+                <h2>With a digital mindset and methods we can:</h2>
+                <ol>
+                  <li>Deliver better services to citizens</li>
+                  <li>Make better decisions about polices</li>
+                  <li>Achieve better value from our investments</li>
+                </ol>
+              </main>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <section>
                 <h2>
-                  <FormattedMessage {...HOMEPAGE_CONTENT.title} />
+                  <strong>
+                    The Continuous Service Improvement (CSI) lab is a space where we are learning to
+                    do this better
+                  </strong>
                 </h2>
                 <p>
-                  <FormattedMessage {...HOMEPAGE_CONTENT.introDescription} />
+                  A CSI Lab residency is for Leaders who want to offer exemplary service, optimize
+                  tax dollars, and build high performing modern organizations: <br />
+                  The CSI lab creates and accelerates high performing teams that rapidly engage
+                  people, design, make, and ship service improvements using modern methods.
                 </p>
-              </main>
+                <p>
+                  Unlike team retreats, courses, and consultant reports, The CSI lab invests heavily
+                  in learning by doing, with the support of Agile methods, service design, modern
+                  technology, and community.
+                </p>
+              </section>
             </Col>
           </Row>
         </Container>
