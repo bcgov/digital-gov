@@ -20,13 +20,13 @@ export class Index extends Component {
               <Col md="7" sm="12" css={{ padding: 0 }}>
                 <Img fluid={data.file.childImageSharp.fluid} alt="image of CSI Lab" />
               </Col>
-              <Col md="5" sm={{ size: 6 }}>
+              <Col md="5">
                 <SidePanel />
               </Col>
             </Row>
           </Container>
         </div>
-        <div css={[mainGradientBG, { flexGrow: 1, paddingTop: 25 }]}>
+        <div css={[mainGradientBG, { flexGrow: 1, padding: '25px 0 44px' }]}>
           <Container>
             <Row>
               <Col md={{ size: 10, offset: 1 }} css={{ marginTop: 20 }}>

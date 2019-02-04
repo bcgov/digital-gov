@@ -16,7 +16,6 @@ export class Layout extends React.Component {
         css={{
           margin: '0 auto',
           padding: '55px 0 44px',
-          height: '100vh',
           display: 'flex',
           flexDirection: 'column',
         }}
