@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
+import classes from './index.module.css';
 // components
-import NonStretchedImg from '../components/UI/NonStretchedImg/NonStretchedImg';
 import Layout from '../hoc/Layout';
 import { Container, Row, Col } from 'reactstrap';
 import SidePanel from '../components/Home/SidePanel';
@@ -10,10 +10,12 @@ import Main from '../components/Home/Main';
 import ConnectWithUs from '../components/Home/ConnectWithUs';
 import Splash from '../components/Home/Splash';
 
-import { mainGradientBG } from '../constants/styles';
-
 export class Index extends Component {
   render() {
+    // const colClass = css`
+    //   padding: 25px;
+    // `;
+
     const { data } = this.props;
     return (
       <Layout>
@@ -21,10 +23,11 @@ export class Index extends Component {
         <Splash imgUrl={data.splash.childImageSharp.fluid.src}>
           <div css={{ height: 450 }} />
         </Splash>
-        <div css={[{ flexGrow: 1 }]}>
-          <Container css={{ marginBottom: 25, padding: '25px 0' }}>
+        <div css={{ flexGrow: 1 }}>
+          <Container>
             <Row>
               <Col
+                className={classes.col}
                 md="6"
                 css={css`
                   border: 0;
@@ -35,7 +38,7 @@ export class Index extends Component {
               >
                 <Main />
               </Col>
-              <Col md="6">
+              <Col className={classes.col} md="6">
                 <SidePanel />
               </Col>
             </Row>
@@ -43,7 +46,7 @@ export class Index extends Component {
           <hr css={{ borderWidth: 3 }} />
           <Container css={{ marginBottom: 55, padding: '25px 0' }}>
             <Row>
-              <Col md="12">
+              <Col className={classes.col} md="12">
                 <ConnectWithUs />
               </Col>
             </Row>
