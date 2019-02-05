@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 // components
-import Img from 'gatsby-image';
+import NonStretchedImg from '../components/Ui/NonStretchedImg/NonStretchImg';
 import Layout from '../hoc/Layout';
 import { Container, Row, Col } from 'reactstrap';
 import SidePanel from '../components/Home/SidePanel';
@@ -17,11 +17,11 @@ export class Index extends Component {
     return (
       <Layout>
         {/* css prop is from emotion package */}
-        <div css={{ backgroundColor: '#f2f2f2', color: '#444' }}>
-          <Container css={{ border: '1px solid #ccc' }}>
+        <div css={{ backgroundColor: '#f2f2f2', color: '#444', paddingTop: 35 }}>
+          <Container>
             <Row>
               <Col md="12" css={{ padding: 0 }}>
-                <Img fluid={data.file.childImageSharp.fluid} alt="image of CSI Lab" />
+                <NonStretchedImg fluid={data.file.childImageSharp.fluid} alt="image of CSI Lab" />
               </Col>
             </Row>
           </Container>
@@ -65,8 +65,8 @@ export const query = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 250, quality: 100) {
-          ...GatsbyImageSharpFluid_noBase64
+        fluid(maxWidth: 550, quality: 99) {
+          ...GatsbyImageSharpFluid
           presentationWidth
         }
       }

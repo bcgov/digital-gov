@@ -16,6 +16,7 @@ limitations under the License.
 Created by Patrick Simonian
 */
 import React from 'react';
+import shortid from 'shortid';
 import { FormattedMessage } from 'react-intl';
 import { HOMEPAGE_CONTENT } from './content';
 import styled from '@emotion/styled';
@@ -39,7 +40,7 @@ const SidePanel = () => (
     <ol css={{ fontSize: '1.15em' }}>
       {HOMEPAGE_CONTENT.SIDE.list.map(l => {
         return (
-          <LI>
+          <LI key={shortid.generate()}>
             <FormattedMessage {...l} />
           </LI>
         );
