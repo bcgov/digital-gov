@@ -12,14 +12,9 @@ import Splash from '../components/Home/Splash';
 
 export class Index extends Component {
   render() {
-    // const colClass = css`
-    //   padding: 25px;
-    // `;
-
     const { data } = this.props;
     return (
       <Layout>
-        {/* css prop is from emotion package */}
         <Splash imgUrl={data.splash.childImageSharp.fluid.src}>
           <div css={{ height: 450 }} />
         </Splash>
