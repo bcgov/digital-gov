@@ -32,7 +32,7 @@ const StyledLinkComponent = styled(Link)`
 
 const ConnectWithUs = () => (
   <section css={{ textAlign: 'center' }}>
-    <h3>Connect With Us</h3>
+    <h3 css={{ textDecoration: 'underline' }}>Join the Community</h3>
     <div
       css={{
         display: 'flex',
