@@ -16,7 +16,7 @@ export class Index extends Component {
     return (
       <Layout>
         <Splash imgUrl={data.splash.childImageSharp.fluid.src}>
-          <div css={{ height: 450 }} />
+          <div css={{ height: 475 }} />
         </Splash>
         <div css={{ flexGrow: 1 }}>
           <Container>
