@@ -20,25 +20,32 @@ import { FormattedMessage } from 'react-intl';
 import { HOMEPAGE_CONTENT } from './content';
 import styled from '@emotion/styled';
 
-// const LI = styled.li`
-//   padding: 5px;
-// `;
+const LI = styled.li`
+  padding: 5px;
+`;
 
 const SidePanel = () => (
-  <section css={{ marginTop: 15 }}>
-    <h2 css={{ fontSize: '2em', borderBottom: '3px solid #f4c200' }}>
+  <aside>
+    <h2
+      css={{
+        fontSize: '1.5em',
+        borderBottom: '3px solid #f4c200',
+        paddingBottom: 5,
+        textAlign: 'center',
+      }}
+    >
       <FormattedMessage {...HOMEPAGE_CONTENT.SIDE.title} />
     </h2>
-    <ol css={{ fontSize: '1.25em' }}>
+    <ol css={{ fontSize: '1.15em' }}>
       {HOMEPAGE_CONTENT.SIDE.list.map(l => {
         return (
-          <li>
+          <LI>
             <FormattedMessage {...l} />
-          </li>
+          </LI>
         );
       })}
     </ol>
-  </section>
+  </aside>
 );
 
 export default SidePanel;

@@ -21,8 +21,12 @@ import { HOMEPAGE_CONTENT } from './content';
 
 const HomeMainContent = () => (
   <main>
-    <h2>
-      <strong>
+    <h2
+      css={{
+        color: '#042449',
+      }}
+    >
+      <strong css={{ fontWeight: 400 }}>
         <FormattedMessage {...HOMEPAGE_CONTENT.MAIN.title} />
       </strong>
     </h2>
