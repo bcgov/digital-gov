@@ -18,7 +18,7 @@ export class Index extends Component {
         <Splash imgUrl={data.splash.childImageSharp.fluid.src} />
         <div css={{ flexGrow: 1 }}>
           <Container>
-            <Row>
+            <Row className={classes.row}>
               <Col
                 className={classes.col}
                 md="6"
