@@ -15,9 +15,7 @@ export class Index extends Component {
     const { data } = this.props;
     return (
       <Layout>
-        <Splash imgUrl={data.splash.childImageSharp.fluid.src}>
-          <div css={{ height: 475 }} />
-        </Splash>
+        <Splash imgUrl={data.splash.childImageSharp.fluid.src} />
         <div css={{ flexGrow: 1 }}>
           <Container>
             <Row>

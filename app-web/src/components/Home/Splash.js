@@ -22,10 +22,15 @@ const Splash = ({ imgUrl, children }) => {
   const DIV = styled.div`
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
     background-image: url(${imgUrl});
     width: 100%;
-    background-position: center;
+    background-size: contain;
+    min-height: 200px;
+    @media (min-width: 478px) {
+      background-position: center;
+      background-size: cover;
+      min-height: 450px;
+    }
   `;
   return <DIV>{children}</DIV>;
 };
