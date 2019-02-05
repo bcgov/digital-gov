@@ -6,7 +6,7 @@ export const HOMEPAGE = {
     title: 'With a digital mindset and methods we can',
     list: [
       'Deliver better services to citizens',
-      'Make better decisions about polices',
+      'Make better decisions about policies',
       'Achieve better value from our investments',
     ],
   },
