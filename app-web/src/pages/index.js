@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 // components
-import NonStretchedImg from '../components/Ui/NonStretchedImg/NonStretchImg';
+import NonStretchedImg from '../components/UI/NonStretchedImg/NonStretchedImg';
 import Layout from '../hoc/Layout';
 import { Container, Row, Col } from 'reactstrap';
 import SidePanel from '../components/Home/SidePanel';
