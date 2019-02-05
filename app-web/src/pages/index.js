@@ -9,6 +9,7 @@ import SidePanel from '../components/Home/SidePanel';
 import Main from '../components/Home/Main';
 import ConnectWithUs from '../components/Home/ConnectWithUs';
 import Splash from '../components/Home/Splash';
+import MountainsBanner from '../components/UI/MountainsBanner/MountainsBanner';
 
 export class Index extends Component {
   render() {
@@ -37,13 +38,15 @@ export class Index extends Component {
             </Row>
           </Container>
           <hr css={{ borderWidth: 3 }} />
-          <Container css={{ marginBottom: 55, padding: '25px 0' }}>
-            <Row>
-              <Col className={classes.col} md="12">
-                <ConnectWithUs />
-              </Col>
-            </Row>
-          </Container>
+          <MountainsBanner>
+            <Container css={{ marginBottom: 47, padding: '25px 0' }}>
+              <Row>
+                <Col className={classes.col} md="12">
+                  <ConnectWithUs />
+                </Col>
+              </Row>
+            </Container>
+          </MountainsBanner>
         </div>
       </Layout>
     );

@@ -24,14 +24,14 @@ import Link from '../UI/Link/Link';
 import { EXTERNAL, MAILTOS } from '../../constants/routes';
 
 const StyledLinkComponent = styled(Link)`
-  font-size: 1.5em;
+  font-size: 1.75em;
   text-decoration: none;
-  color: #444;
+  color: inherit;
   margin: 0 10px;
 `;
 
 const ConnectWithUs = () => (
-  <section css={{ textAlign: 'center' }}>
+  <section css={{ textAlign: 'center', color: '#fff' }}>
     <h3 css={{ textDecoration: 'underline' }}>Join the Community</h3>
     <div
       css={{
