@@ -16,27 +16,22 @@ limitations under the License.
 Created by Patrick Simonian
 */
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import { HOMEPAGE_CONTENT } from './content';
+import Img from 'gatsby-image';
 
-const HomeMainContent = () => (
-  <main>
-    <h2
-      css={{
-        color: '#042449',
-      }}
-    >
-      <strong css={{ fontWeight: 400 }}>
-        <FormattedMessage {...HOMEPAGE_CONTENT.MAIN.title} />
-      </strong>
-    </h2>
-    <p>
-      <FormattedMessage {...HOMEPAGE_CONTENT.MAIN.p1} />
-    </p>
-    <p>
-      <FormattedMessage {...HOMEPAGE_CONTENT.MAIN.p2} />
-    </p>
-  </main>
-);
+const NonStretchedImg = props => {
+  let normalizedProps = props;
+  if (props.fluid && props.fluid.presentationWidth) {
+    normalizedProps = {
+      ...props,
+      style: {
+        ...(props.style || {}),
+        maxWidth: props.fluid.presentationWidth,
+        margin: '0 auto', // Used to center the image
+      },
+    };
+  }
 
-export default HomeMainContent;
+  return <Img {...normalizedProps} />;
+};
+
+export default NonStretchedImg;
