@@ -8,6 +8,7 @@ import { Container, Row, Col } from 'reactstrap';
 import SidePanel from '../components/Home/SidePanel';
 import Main from '../components/Home/Main';
 import ConnectWithUs from '../components/Home/ConnectWithUs';
+import Splash from '../components/Home/Splash';
 
 import { mainGradientBG } from '../constants/styles';
 
@@ -17,20 +18,14 @@ export class Index extends Component {
     return (
       <Layout>
         {/* css prop is from emotion package */}
-        <div css={{ backgroundColor: '#f2f2f2', color: '#444', paddingTop: 35 }}>
-          <Container>
-            <Row>
-              <Col md="12" css={{ padding: 0 }}>
-                <NonStretchedImg fluid={data.file.childImageSharp.fluid} alt="image of CSI Lab" />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div css={[mainGradientBG, { flexGrow: 1, padding: '25px 0 44px' }]}>
-          <Container css={{ marginBottom: 25 }}>
+        <Splash imgUrl={data.splash.childImageSharp.fluid.src}>
+          <div css={{ height: 450 }} />
+        </Splash>
+        <div css={[{ flexGrow: 1 }]}>
+          <Container css={{ marginBottom: 25, padding: '25px 0' }}>
             <Row>
               <Col
-                md={{ size: 8 }}
+                md="6"
                 css={css`
                   border: 0;
                   @media (min-width: 428px) {
@@ -40,13 +35,15 @@ export class Index extends Component {
               >
                 <Main />
               </Col>
-              <Col md="4">
+              <Col md="6">
                 <SidePanel />
               </Col>
             </Row>
-            <hr css={{ borderWidth: 3 }} />
+          </Container>
+          <hr css={{ borderWidth: 3 }} />
+          <Container css={{ marginBottom: 55, padding: '25px 0' }}>
             <Row>
-              <Col md={{ size: 6, offset: 3 }}>
+              <Col md="12">
                 <ConnectWithUs />
               </Col>
             </Row>
@@ -68,6 +65,15 @@ export const query = graphql`
         fluid(maxWidth: 550, quality: 99) {
           ...GatsbyImageSharpFluid
           presentationWidth
+        }
+      }
+    }
+    splash: file(relativePath: { eq: "splash.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fluid(maxWidth: 1200, quality: 75) {
+          src
         }
       }
     }
