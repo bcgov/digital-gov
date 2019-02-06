@@ -7,5 +7,7 @@
 }
 
 @media screen and (min-width: 428px) {
-  padding: 28px;
+  .col {
+    padding: 28px;
+  }
 }
