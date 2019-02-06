@@ -9,6 +9,7 @@ import SidePanel from '../components/Home/SidePanel';
 import Main from '../components/Home/Main';
 import ConnectWithUs from '../components/Home/ConnectWithUs';
 import Splash from '../components/Home/Splash';
+import LabProjects from '../components/Home/LabProjects';
 
 export class Index extends Component {
   render() {
@@ -41,6 +42,11 @@ export class Index extends Component {
             <Row>
               <Col className={classes.col} md="12">
                 <ConnectWithUs />
+              </Col>
+            </Row>
+            <Row>
+              <Col className={classes.col} md="12">
+                <LabProjects />
               </Col>
             </Row>
           </Container>
