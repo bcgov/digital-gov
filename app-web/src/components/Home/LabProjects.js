@@ -78,25 +78,27 @@ const LabProjects = () => (
     </p>
     <UL>
       <LI>
-        <A href="www.projects.eao.gov.bc.ca">EAO Project Information and Collaboration (EPIC)</A>
+        <A href="https://projects.eao.gov.bc.ca">
+          EAO Project Information and Collaboration (EPIC)
+        </A>
       </LI>
       <LI>
-        <A href="comment.nrs.gov.bc.ca">Public Review and Comment (PRC)</A>
+        <A href="https://comment.nrs.gov.bc.ca">Public Review and Comment (PRC)</A>
       </LI>
       <LI>
         <A href="www2.gov.bcc.ca/gov/content">GroundWater Wells and Aquifers (GWELLS)</A>
       </LI>
       <LI>
-        <A href="mines.nrs.gov.bc.ca">Mines Digital Services</A>
+        <A href="https://mines.nrs.gov.bc.ca">Mines Digital Services</A>
       </LI>
       <LI>
-        <A href="vonx.io">Verifiable Organizations Network (VON)</A>
+        <A href="https://vonx.io">Verifiable Organizations Network (VON)</A>
       </LI>
       <LI>
-        <A href="bcdevexchange.org">BC Developers' Exchange</A>
+        <A href="https://bcdevexchange.org">BC Developers' Exchange</A>
       </LI>
       <LI>
-        <A href="developer.gov.bc.ca">DevHub</A>
+        <A href="https://developer.gov.bc.ca">DevHub</A>
       </LI>
     </UL>
   </article>
