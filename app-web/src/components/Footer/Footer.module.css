@@ -1,14 +1,13 @@
 .PrimaryFooter {
     background-color: #036;
     border-top: 2px solid #fcba19;
-    padding: 9px 0 10px;
     color: #fff;
-    padding: 0 12px 0 25px;
     position: fixed;
     z-index: 50;
     left: 0;
     bottom: 0;
     width: 100%;
+    font-size: .85em;
 }
 
 .PrimaryFooter a {
@@ -31,6 +30,7 @@
     flex-grow: 1;
     list-style: none;
     margin: 0;
+    flex-wrap: wrap;
     padding: 0;
 }
 
@@ -46,6 +46,7 @@
 @media screen and (min-width: 600px) {
     .PrimaryFooter {
         padding: 0 65px 0 65px;
+        font-size: 1em;
     }
 }
 

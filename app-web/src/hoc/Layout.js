@@ -20,7 +20,7 @@ export class Layout extends React.Component {
           flexDirection: 'column',
         }}
       >
-        <Header showHamburger hamburgerClicked={toggleMenu} />
+        <Header hamburgerClicked={toggleMenu} />
 
         {children}
 

@@ -38,7 +38,7 @@ export class Index extends Component {
             </Row>
           </Container>
           <hr css={{ borderWidth: 3 }} />
-          <Container css={{ marginBottom: 55, padding: '25px 0' }}>
+          <Container css={{ marginBottom: 55 }}>
             <Row>
               <Col className={classes.col} md="12">
                 <ConnectWithUs />
