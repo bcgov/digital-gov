@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import classes from './index.module.css';
+import { LAB_PROJECTS } from '../constants/ui';
 // components
 import Layout from '../hoc/Layout';
 import { Container, Row, Col } from 'reactstrap';
@@ -46,7 +47,7 @@ export class Index extends Component {
             </Row>
             <Row>
               <Col className={classes.col} md="12">
-                <LabProjects />
+                <LabProjects projects={LAB_PROJECTS} />
               </Col>
             </Row>
           </Container>

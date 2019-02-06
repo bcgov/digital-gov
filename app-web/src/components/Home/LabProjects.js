@@ -17,6 +17,9 @@ Created by Patrick Simonian
 */
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
+import shortid from 'shortid';
 
 const LI_WIDTH = 200;
 const MAX_COLUMNS = 4.5;
@@ -70,38 +73,41 @@ const UL = styled.ul`
   max-width: ${LI_WIDTH * MAX_COLUMNS}px;
 `;
 
-const LabProjects = () => (
+const LabProjects = ({ projects }) => (
   <article css={{ textAlign: 'center' }}>
     <h1> See what we're building!</h1>
     <p>
       Here's a sample of the products our resident teams have built and are continuously improving.
     </p>
     <UL>
-      <LI>
-        <A href="https://projects.eao.gov.bc.ca">
-          EAO Project Information and Collaboration (EPIC)
-        </A>
-      </LI>
-      <LI>
-        <A href="https://comment.nrs.gov.bc.ca">Public Review and Comment (PRC)</A>
-      </LI>
-      <LI>
-        <A href="www2.gov.bcc.ca/gov/content">GroundWater Wells and Aquifers (GWELLS)</A>
-      </LI>
-      <LI>
-        <A href="https://mines.nrs.gov.bc.ca">Mines Digital Services</A>
-      </LI>
-      <LI>
-        <A href="https://vonx.io">Verifiable Organizations Network (VON)</A>
-      </LI>
-      <LI>
-        <A href="https://bcdevexchange.org">BC Developers' Exchange</A>
-      </LI>
-      <LI>
-        <A href="https://developer.gov.bc.ca">DevHub</A>
-      </LI>
+      {projects.map(project => (
+        <LI key={shortid.generate()}>
+          <A href={project.to} aria-label={project.message.description}>
+            <FormattedMessage
+              id={project.message.id}
+              defaultMessage={project.message.defaultMessage}
+              description={project.message.description}
+              values={project.message.values}
+            />
+          </A>
+        </LI>
+      ))}
     </UL>
   </article>
 );
+
+LabProjects.propTypes = {
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      to: PropTypes.string.isRequired,
+      message: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        defaultMessage: PropTypes.string.isRequired,
+        values: PropTypes.object,
+        description: PropTypes.string,
+      }).isRequired,
+    }),
+  ).isRequired,
+};
 
 export default LabProjects;
